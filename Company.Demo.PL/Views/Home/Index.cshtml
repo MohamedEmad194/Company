@@ -1,0 +1,232 @@
+﻿@{
+    ViewData["Title"] = "الصفحة الرئيسية";
+}
+
+<div class="hero-section text-center py-5 mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold text-primary mb-4">
+                    <i class="fas fa-building me-3"></i>
+                    نظام إدارة الشركة
+                </h1>
+                <p class="lead text-muted mb-4">
+                    مرحباً بك في النظام المتكامل لإدارة الأقسام والموظفين
+                </p>
+                <div class="hero-buttons">
+                    <a href="@Url.Action("Index", "Department")" class="btn btn-primary btn-lg me-3 mb-2">
+                        <i class="fas fa-building me-2"></i>
+                        إدارة الأقسام
+                    </a>
+                    <a href="@Url.Action("Index", "Employee")" class="btn btn-outline-primary btn-lg mb-2">
+                        <i class="fas fa-users me-2"></i>
+                        إدارة الموظفين
+                    </a>
+                </div>
+                
+                <!-- Quick Action Buttons -->
+                <div class="mt-4">
+                    <a href="@Url.Action("Create", "Department")" class="btn btn-success btn-lg me-3 mb-2">
+                        <i class="fas fa-plus me-2"></i>
+                        إنشاء قسم جديد
+                    </a>
+                    <a href="@Url.Action("Create", "Employee")" class="btn btn-warning btn-lg mb-2">
+                        <i class="fas fa-user-plus me-2"></i>
+                        تسجيل موظف جديد
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Quick Stats Section -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card stat-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-building fa-3x text-primary"></i>
+                    </div>
+                    <h3 class="card-title h4 mb-2">الأقسام</h3>
+                    <p class="card-text text-muted">إدارة أقسام الشركة وتنظيمها</p>
+                    <a href="@Url.Action("Index", "Department")" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>
+                        عرض الأقسام
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card stat-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-users fa-3x text-success"></i>
+                    </div>
+                    <h3 class="card-title h4 mb-2">الموظفين</h3>
+                    <p class="card-text text-muted">إدارة بيانات الموظفين وسجلاتهم</p>
+                    <a href="@Url.Action("Index", "Employee")" class="btn btn-outline-success">
+                        <i class="fas fa-arrow-left me-2"></i>
+                        عرض الموظفين
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card stat-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-chart-line fa-3x text-info"></i>
+                    </div>
+                    <h3 class="card-title h4 mb-2">التقارير</h3>
+                    <p class="card-text text-muted">عرض إحصائيات وتقارير النظام</p>
+                    <a href="#" class="btn btn-outline-info">
+                        <i class="fas fa-arrow-left me-2"></i>
+                        عرض التقارير
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center mb-5">
+                <i class="fas fa-star text-warning me-3"></i>
+                مميزات النظام
+            </h2>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="feature-item text-center p-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                </div>
+                <h5 class="mb-3">أمان عالي</h5>
+                <p class="text-muted">نظام مصادقة متقدم مع صلاحيات محددة</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="feature-item text-center p-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-mobile-alt fa-2x text-success"></i>
+                </div>
+                <h5 class="mb-3">متجاوب</h5>
+                <p class="text-muted">يعمل على جميع الأجهزة والشاشات</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="feature-item text-center p-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-bolt fa-2x text-warning"></i>
+                </div>
+                <h5 class="mb-3">سريع</h5>
+                <p class="text-muted">أداء عالي وسرعة في الاستجابة</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="feature-item text-center p-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-cogs fa-2x text-info"></i>
+                </div>
+                <h5 class="mb-3">سهل الاستخدام</h5>
+                <p class="text-muted">واجهة بسيطة وبديهية</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Message for Authenticated Users -->
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="alert alert-success border-0 shadow-sm">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle fa-2x me-3 text-success"></i>
+                        <div>
+                            <h5 class="alert-heading mb-1">مرحباً @User.Identity.Name!</h5>
+                            <p class="mb-0">تم تسجيل دخولك بنجاح. يمكنك الآن الوصول لجميع ميزات النظام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 0 0 2rem 2rem;
+    margin: -1.5rem -1.5rem 2rem -1.5rem;
+}
+
+.hero-section h1 {
+    color: white !important;
+}
+
+.hero-section .lead {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.stat-icon {
+    opacity: 0.8;
+}
+
+.feature-item {
+    transition: transform 0.3s ease;
+    border-radius: 1rem;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    opacity: 0.8;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.alert {
+    border-radius: 1rem;
+}
+
+@@media (max-width: 768px) {
+    .hero-section {
+        margin: -1rem -1rem 1.5rem -1rem;
+        padding: 2rem 1rem !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+</style>

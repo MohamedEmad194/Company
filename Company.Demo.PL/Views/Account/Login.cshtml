@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Login";
+    var returnUrl = ViewData["ReturnUrl"] as string;
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h3>Login</h3>
+                </div>
+                <div class="card-body">
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                            {
+                                <div>@error.ErrorMessage</div>
+                            }
+                        </div>
+                    }
+
+                    <form method="post" action="/Account/Login">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required />
+                        </div>
+                        <input type="hidden" name="returnUrl" value="@returnUrl" />
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        
+                        <div class="text-center mt-3">
+                            <a asp-action="ForgotPassword" class="text-decoration-none">
+                                <i class="fas fa-question-circle me-1"></i>
+                              Forgot Password?
+                            </a>
+                        </div>
+                    </form>
+
+                    <hr class="my-4">
+                    <div class="text-center">
+                        <small class="text-muted">Test Accounts:</small>
+                        <div class="mt-2">
+                            <div class="badge bg-secondary me-2">mohamedemadbrkawy@gmail.com</div>
+                            <div class="badge bg-secondary me-2">MOHAMEDemad123</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="badge bg-secondary me-2">mohamed@gmail.com</div>
+                            <div class="badge bg-secondary me-2">mohamed@123</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

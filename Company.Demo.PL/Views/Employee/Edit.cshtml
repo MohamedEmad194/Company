@@ -1,0 +1,31 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+<h1>Edit Employee</h1>
+<br />
+<br />
+
+<form asp-action="Edit">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <partial name="PartialViews/CreateEditEmployeePartial"></partial>
+        </div>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+
+@section ValidationScriptSection {
+
+
+    <partial name="_ValidationScriptSection"></partial>
+}
